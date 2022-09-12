@@ -1,0 +1,92 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO iiitb_sd_fsm
+  CLASS BLOCK ;
+  FOREIGN iiitb_sd_fsm ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 50.000 BY 50.000 ;
+  PIN clock
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 0.090 0.000 0.370 4.000 ;
+    END
+  END clock
+  PIN detector_out
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 0.090 46.000 0.370 50.000 ;
+    END
+  END detector_out
+  PIN reset
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 48.390 46.000 48.670 50.000 ;
+    END
+  END reset
+  PIN sequence_in
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 48.390 0.000 48.670 4.000 ;
+    END
+  END sequence_in
+  PIN vccd1
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER met4 ;
+        RECT 9.590 10.640 11.190 38.320 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 19.330 10.640 20.930 38.320 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 29.070 10.640 30.670 38.320 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 38.810 10.640 40.410 38.320 ;
+    END
+  END vccd1
+  PIN vssd1
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER met4 ;
+        RECT 14.460 10.640 16.060 38.320 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 24.200 10.640 25.800 38.320 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 33.940 10.640 35.540 38.320 ;
+    END
+  END vssd1
+  OBS
+      LAYER li1 ;
+        RECT 5.520 10.795 44.160 38.165 ;
+      LAYER met1 ;
+        RECT 0.070 10.640 48.690 38.320 ;
+      LAYER met2 ;
+        RECT 0.650 45.720 48.110 46.000 ;
+        RECT 0.100 4.280 48.660 45.720 ;
+        RECT 0.650 4.000 48.110 4.280 ;
+      LAYER met3 ;
+        RECT 9.600 10.715 40.400 38.245 ;
+  END
+END iiitb_sd_fsm
+END LIBRARY
+
