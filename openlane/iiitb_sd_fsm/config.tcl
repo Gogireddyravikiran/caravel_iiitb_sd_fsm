@@ -22,7 +22,7 @@ set ::env(DESIGN_NAME) iiitb_sd_fsm
 
 set ::env(VERILOG_FILES) "\
 	$::env(CARAVEL_ROOT)/verilog/rtl/defines.v \
-	$script_dir/../../verilog/rtl/iiitb_sd_fsm1.v"
+	$script_dir/../../verilog/rtl/iiitb_sd_fsm.v"
 	
 
 
@@ -37,7 +37,7 @@ set ::env(DIE_AREA) "0 0 50 50"
 
 
 set ::env(PL_BASIC_PLACEMENT) 0
-set ::env(PL_TARGET_DENSITY) 0.4
+set ::env(PL_TARGET_DENSITY) 0.05
 
 # Maximum layer used for routing is metal 4.
 # This is because this macro will be inserted in a top level (user_project_wrapper) 
